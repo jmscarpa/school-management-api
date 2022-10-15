@@ -23,10 +23,9 @@ echo -e "${COLOR_YELLOW}========> Updating database...${COLOR_CLEAN}"
 echo -ne "Waiting for database ... "
 docker compose exec app bash -c "while (! (</dev/tcp/postgres/5432) >/dev/null 2>&1); do sleep 1; done"
 echo -e "${COLOR_GREEN}done${COLOR_CLEAN}"
-(docker-compose exec app rails db:exists) && docker compose exec app rails db:migrate
-(! docker-compose exec app rails db:exists) && docker compose exec app rails jobs:clear db:create db:migrate db:seed jobs:start
+docker compose exec app rails db:create db:migrate db:seed
 
 echo " "
 echo -e "${COLOR_YELLOW}========> Starting service...${COLOR_CLEAN}"
-docker logs app-api -n 8
-docker attach app-api
+docker logs courses-api -n 8
+docker attach courses-api

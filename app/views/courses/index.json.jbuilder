@@ -1,1 +1,1 @@
-json.array! @courses, :id, :title
+json.array! @courses, :id, :title, :price, :students_count

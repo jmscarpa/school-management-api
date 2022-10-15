@@ -35,7 +35,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.permit(:title, :description, :active)
+    params.permit(:title, :description, :price, :active)
   end
 
 end

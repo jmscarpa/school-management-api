@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_30_004350) do
     t.string "title", null: false
     t.text "description", null: false
     t.boolean "active", default: true, null: false
+    t.float "price", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
