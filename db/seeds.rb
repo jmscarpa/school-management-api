@@ -17,3 +17,7 @@ Course.create(
   title: "Docker para iniciantes",
   description: "Aprenda a criar seus primeiros containers"
 )
+
+User.create(name: "João Scarpa", email: 'joao.scarpa@gmail.com', password: '123456')
+User.create(name: "Mateus Bittencour", email: 'mateusmbittencourt@gmail.com', password: '123456')
+User.create(name: "Fabio Alcino", email: 'fabioasantosdev@gmail.com', password: '123456')

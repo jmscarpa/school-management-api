@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
 
+  before_action :authenticate!
+
   def index
     @courses = Course.all.order(:title)
   end
