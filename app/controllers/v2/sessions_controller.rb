@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class V2::SessionsController < ApplicationController
 
   def create
     user = User.find_for_database_authentication(email: params[:email])
